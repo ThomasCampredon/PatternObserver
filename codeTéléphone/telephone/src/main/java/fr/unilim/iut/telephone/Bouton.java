@@ -1,15 +1,20 @@
 package fr.unilim.iut.telephone;
 
-public class Bouton {
-	private String type;
+public class Bouton extends Thread{
 	private boolean isPressed;
 
-	public Bouton(String type) {
-		this.type = type;
+	public Bouton() {
 		this.isPressed = false;
 	}
 	
-	public void detecterPression() {
-		
+
+	public boolean detecterPression() {
+		return isPressed;
+	}
+	
+	
+	
+	public void setIsPressed(boolean pressed) {
+		this.isPressed = pressed;
 	}
 }
